@@ -3,6 +3,20 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+# Створення прикладу даних для скачування
+example_data = """товар,кількість,дата,регіон,сума
+Смартфон,10,2026-01-05,Київ,100000
+Ноутбук,2,2026-01-12,Львів,70000
+Навушники,25,2026-01-25,Київ,25000
+Смартфон,8,2026-02-02,Одеса,80000
+Мишка,40,2026-02-14,Харків,20000"""
+
+st.sidebar.download_button(
+    label="📥 Скачати приклад CSV для тесту",
+    data=example_data,
+    file_name='test_sales_sample.csv',
+    mime='text/csv',
+)
 # Налаштування сторінки
 st.set_page_config(page_title="E-commerce Analytics", layout="wide")
 
